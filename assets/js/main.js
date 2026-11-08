@@ -85,7 +85,7 @@
     }).join("");
     el.innerHTML =
       '<a class="latest reveal" href="' + newsHref(n) + '">' +
-        '<div class="latest-media">' + (n.images && n.images[0] ? '<img src="' + esc(src(n.images[0])) + '" alt="' + esc(n.title) + '" loading="lazy">' : newsCover(n)) + '</div>' +
+        '<div class="latest-media">' + (n.images && n.images[0] ? '<img src="' + esc(src(n.images[0])) + '" alt="' + esc(n.title) + '" loading="lazy"' + (n.focus ? ' style="object-position:' + esc(n.focus) + '"' : "") + '>' : newsCover(n)) + '</div>' +
         '<div class="latest-body">' +
           '<span class="latest-label"><span class="dot"></span>NEW · Latest News</span>' +
           '<span><span class="tag" data-kind="' + esc(n.tag) + '">' + esc(n.tag) + '</span></span>' +
@@ -105,7 +105,7 @@
       var media = imgs.map(function (p, i) {
         return n.logo
           ? '<div><img src="' + esc(src(p)) + '" alt="' + esc(n.title) + '" loading="lazy"></div>'
-          : '<a href="' + esc(src(p)) + '" data-zoom><img src="' + esc(src(p)) + '" alt="' + esc(n.title) + (imgs.length > 1 ? " (" + (i + 1) + ")" : "") + '" loading="lazy"></a>';
+          : '<a href="' + esc(src(p)) + '" data-zoom><img src="' + esc(src(p)) + '" alt="' + esc(n.title) + (imgs.length > 1 ? " (" + (i + 1) + ")" : "") + '" loading="lazy"' + (i === 0 && n.focus ? ' style="object-position:' + esc(n.focus) + '"' : "") + '></a>';
       }).join("");
       var body = (n.body || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
       return '<article class="news-item reveal" id="' + esc(n.id) + '" data-tag="' + esc(n.tag) + '">' +
@@ -168,17 +168,12 @@
   /* ---------- Projects ---------- */
   function renderProjects() {
     var el = $("#projects"); if (!el || !DATA.projects) return;
-    el.innerHTML = '<table><thead><tr><th scope="col">과제명</th><th scope="col">지원기관</th><th scope="col">기간</th><th scope="col" class="amount">연구비*</th><th scope="col">역할</th></tr></thead><tbody>' +
-      DATA.projects.map(function (p) {
-        var lead = /책임/.test(p.role);
-        return '<tr>' +
-          '<td class="p-title">' + esc(p.title) + (p.program ? '<span>' + esc(p.program) + '</span>' : "") + '</td>' +
-          '<td data-label="지원기관">' + esc(p.agency) + '</td>' +
-          '<td class="num" data-label="기간">' + esc(p.period) + '</td>' +
-          '<td class="num amount" data-label="연구비(만원)">' + esc(p.amount) + '</td>' +
-          '<td><span class="role' + (lead ? "" : " alt") + '">' + esc(p.role) + '</span></td>' +
-        '</tr>';
-      }).join("") + '</tbody></table>';
+    el.innerHTML = '<ul class="pj-list">' + DATA.projects.map(function (p) {
+      return '<li><span class="pj-t">' + esc(p.title) + '</span>' +
+        (p.agency ? '<span class="pj-a">' + esc(p.agency) + '</span>' : "") +
+        (p.items && p.items.length ? '<ul class="pj-sub">' + p.items.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ul>" : "") +
+      '</li>';
+    }).join("") + '</ul>';
   }
 
   /* ---------- Publications ---------- */
@@ -272,7 +267,7 @@
         panes.forEach(function (p) { p.hidden = p.getAttribute("data-lang-pane") !== lang; });
       }
       btns.forEach(function (b) { b.addEventListener("click", function () { show(b.getAttribute("data-lang-btn")); }); });
-      show("en");
+      show(box.getAttribute("data-lang-default") || "en");
     });
   }
 

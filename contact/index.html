@@ -43,16 +43,16 @@
     <section class="section">
       <div class="container">
         <div class="contact-grid">
-          <!-- 영어가 기본, '한국어' 탭을 누르면 한국어로 바뀝니다 (data-lang-tabs) -->
-          <div class="panel reveal" data-lang-tabs>
+          <!-- 한국어가 기본, 'EN' 탭을 누르면 영어로 바뀝니다 (data-lang-default="ko") -->
+          <div class="panel reveal" data-lang-tabs data-lang-default="ko">
             <div class="lang-head">
               <span class="lang">Recruitment</span>
               <div class="lang-tabs light" role="tablist" aria-label="Language">
-                <button type="button" role="tab" data-lang-btn="en" aria-selected="true">EN</button>
-                <button type="button" role="tab" data-lang-btn="ko" aria-selected="false">한국어</button>
+                <button type="button" role="tab" data-lang-btn="ko" aria-selected="true">한국어</button>
+                <button type="button" role="tab" data-lang-btn="en" aria-selected="false">EN</button>
               </div>
             </div>
-            <div class="lang-block" data-lang-pane="en" role="tabpanel" lang="en">
+            <div class="lang-block" data-lang-pane="en" role="tabpanel" lang="en" hidden>
               <h3>Join AITEL!</h3>
               <p>We are looking for passionate undergraduate and graduate (M.S./Ph.D.) students to join our team.</p>
               <ul class="kv">
@@ -61,7 +61,7 @@
                 <li><span class="k">Contact</span><span class="v">Email: <a href="mailto:haeunlee@yu.ac.kr">haeunlee@yu.ac.kr</a>, Tel: <a href="tel:+82538103010">+82-53-810-3010</a></span></li>
               </ul>
             </div>
-            <div class="lang-block" data-lang-pane="ko" role="tabpanel" lang="ko" hidden>
+            <div class="lang-block" data-lang-pane="ko" role="tabpanel" lang="ko">
               <h3>AITEL 연구원 모집 (Join AITEL!)</h3>
               <p>AI Thermal &amp; Energy Lab에서 열정적인 학부연구생 및 대학원생(M.S./Ph.D.)을 모집합니다.</p>
               <ul class="kv">

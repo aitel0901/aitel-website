@@ -15,6 +15,7 @@
  *  date    : (선택) "2026.07" 같은 날짜. 비워두면 표시 안 함
  *  cover   : (선택) 사진이 없을 때 사진 자리에 크게 보일 행사명 등
  *  coverSub: (선택) cover 아래 작은 글씨 (장소·날짜 등)
+ *  focus   : (선택) 첫 사진이 잘려 보일 때 보여줄 위치. 예) "50% 88%" = 가운데·아래쪽
  *            → 나중에 사진이 생기면 images 에 넣으면 사진이 대신 보입니다.
  */
 window.AITEL = window.AITEL || {};
@@ -27,6 +28,7 @@ window.AITEL.news = [
     date: "2026.10.26–29",
     body: ["ASME InterPACK 2026(미국 샌디에이고)에 참석하여 박진현 학생과 이하은 교수가 연구 발표를 진행하였습니다."],
     images: ["assets/img/news/2026-interpack-1.jpg", "assets/img/news/2026-interpack-2.jpg"],
+    focus: "50% 88%",
     link: "https://event.asme.org/InterPACK",
     linkLabel: "학회 홈페이지"
   },
