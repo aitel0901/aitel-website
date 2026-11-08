@@ -68,12 +68,16 @@ assets/img/             사진·로고
 ## 배포 (GitHub Pages)
 
 - 저장소: https://github.com/aitel0901/aitel-website (Public, `main` 브랜치 최상위가 곧 사이트)
-- 사이트 주소: https://aitel.yu.ac.kr (GitHub **Settings → Pages → Custom domain** 에 설정 완료, `CNAME` 파일 자동 생성)
+- 지금 주소(미리보기): https://aitel0901.github.io/aitel-website/
+- 최종 주소: https://aitel.yu.ac.kr (학교 DNS 변경 후 연결)
 - 저장소의 파일을 고쳐 저장(Commit)하면 1~2분 뒤 자동으로 다시 배포됩니다.
 
-GitHub 쪽 설정은 끝났고, 학교 DNS(아래 표)만 바뀌면 aitel.yu.ac.kr 에 새 사이트가 뜹니다.
-- DNS가 바뀌기 전까지는 aitel.yu.ac.kr 에 예전 Google Sites가 보이고, `aitel0901.github.io/aitel-website` 주소도 aitel.yu.ac.kr 로 넘어갑니다.
-- DNS가 바뀌면 GitHub이 HTTPS 인증서를 자동 발급합니다(보통 수십 분 이내). 발급 후 **Settings → Pages → Enforce HTTPS** 를 체크합니다.
+### 학교 DNS가 바뀐 뒤 aitel.yu.ac.kr 연결 (꼭 해야 함)
+미리보기를 위해 Custom domain 은 비워 둔 상태입니다. 학교에서 DNS를 바꿨다고 연락이 오면:
+1. 저장소 **Settings → Pages → Custom domain** 에 `aitel.yu.ac.kr` 입력 → Save (저장소에 `CNAME` 파일이 자동으로 생깁니다).
+2. 잠시 후 HTTPS 인증서가 발급되면 **Enforce HTTPS** 를 체크합니다.
+
+이 연결을 하기 전까지는 DNS가 바뀌어도 aitel.yu.ac.kr 에 GitHub 오류 페이지가 보이니, DNS 변경 직후 바로 연결합니다.
 
 ## 도메인 연결 (영남대 정보통신 담당 부서에 요청)
 
