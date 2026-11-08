@@ -54,16 +54,13 @@ assets/img/             사진·로고
 
 ## Home 연구 그림
 - **연구 분야 카드(01–03)** 사진: `assets/img/areas/`
-- **Research Framework**(Applications → Phenomena → AI-Centered Design Framework → Validation → Optimized Thermal Solutions) 그림:
-  `assets/img/framework/` — 연구실 발표자료·논문 그림과 기업 공개 보도자료 사진입니다.
-  - 01 Applications: 구동계 사진은 Bosch Media Service 보도자료 사진("Picture: Bosch" 표기 조건으로 무료 게재)입니다.
+  - 카드 02의 구동모터 사진은 Bosch Media Service 보도자료 사진("Picture: Bosch" 표기 조건으로 무료 게재)입니다.
     기업과 공동연구 중인 제품의 상세 구조는 싣지 않고, 이미 공개된 일반 구조 사진에 출처를 표기합니다.
-  - 03 AI-Centered Design Framework, 05 Optimized Thermal Solutions: 발표자료 그림 대신 `index.html` 안의 키워드 도식(`dg-` 클래스)으로 표현합니다.
-    진행 중인 연구(예: 마이크로채널 냉각기)의 세부 그림은 공개하지 않습니다.
-  다른 연구자의 논문 그림은 피하고, 연구실 그림이나 기업이 공개한 자료를 출처와 함께 쓰는 것을 원칙으로 합니다.
-  저-해상도 그림은 `fw-shot` 에 `fit` 클래스를 붙이면 화면 폭까지 늘어나지 않고 가운데에 표시됩니다.
-  그림을 바꾸려면 같은 파일명으로 덮어쓰거나, `index.html` 의 해당 `fw-panel` 안 `fw-shot`(그림) / `fw-cap`(설명) / `fw-thumbs` 버튼을 같은 순서로 추가·수정하세요.
-  그림을 누르면 크게 볼 수 있습니다. `https://aitel.yu.ac.kr/#fw-3` 처럼 주소 끝에 `#fw-번호`를 붙이면 해당 단계가 열린 상태로 공유됩니다.
+- 카드 아래 한 줄 연구 흐름(Applications → … → Optimized thermal solutions)은 `index.html` 의 `flow-mini` 목록입니다. 필요 없으면 그 `<ol>` 을 지우면 됩니다.
+- 다른 연구자의 논문 그림이나 진행 중인 연구의 세부 그림은 싣지 않고, 연구실 그림이나 기업이 공개한 자료를 출처와 함께 쓰는 것을 원칙으로 합니다.
+
+### 소식 사진
+`images` 에 사진을 3장 이상 넣으면 첫 사진이 크게, 나머지(최대 3장)가 아래에 작게 표시됩니다. 첫 사진은 가로 사진을 권장합니다(Home의 Latest News 사진으로도 쓰임).
 
 ## 배포 (GitHub Pages)
 

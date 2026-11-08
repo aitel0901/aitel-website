@@ -109,7 +109,7 @@
       }).join("");
       var body = (n.body || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
       return '<article class="news-item reveal" id="' + esc(n.id) + '" data-tag="' + esc(n.tag) + '">' +
-        '<div class="news-media' + (n.logo ? " logo" : "") + '">' + (imgs.length ? media : newsCover(n)) + '</div>' +
+        '<div class="news-media' + (n.logo ? " logo" : "") + (imgs.length >= 3 ? " multi" : "") + '">' + (imgs.length ? media : newsCover(n)) + '</div>' +
         '<div class="news-body">' +
           '<div><span class="tag" data-kind="' + esc(n.tag) + '">' + esc(n.tag) + '</span>' + (n.date ? ' <span class="badge year">' + esc(n.date) + '</span>' : "") + '</div>' +
           '<h2>' + esc(n.title) + '</h2>' +

@@ -21,12 +21,12 @@ window.AITEL.publications = {
     {
       authors: "J. Lee†, **J. Park†**, J. Park, K. Kim, K. Yu, H.-J. Pyo, __H. Lee*__, H. Lee*",
       title: "Coupled Thermal-Electromagnetic Performance of Slot-Integrated Vapor Chambers in High-Speed Hairpin Motors",
-      status: "under review"
+      status: "in revision"
     },
     {
       authors: "__H. Lee†__, H. Lee*",
       title: "Physics-Constrained Machine Learning for Enhanced Prediction of Critical Heat Flux in Pool Boiling",
-      status: "under review"
+      status: "in revision"
     },
     {
       authors: "Y. Kim†, C. Yoon, __H. Lee__, C. Han, D. Shin, S. Lee*, H. Lee*",

@@ -20,26 +20,27 @@
 window.AITEL = window.AITEL || {};
 window.AITEL.news = [
   {
-    id: "2026-electronics-cooling-workshop",
-    tag: "Conference",
-    title: "Presentations at the Electronics Cooling Workshop",
-    who: "정민영 · 박진현 학생, 이하은 교수",
-    body: ["전자장비냉각 워크샵에 참석하여 정민영·박진현 학생과 이하은 교수가 연구 발표를 진행하였습니다."],
-    images: [],
-    cover: "Electronics Cooling Workshop",
-    coverSub: "전자장비냉각 워크샵"
-  },
-  {
     id: "2026-asme-interpack",
     tag: "Conference",
     title: "Presentations at ASME InterPACK 2026",
     who: "박진현 학생, 이하은 교수",
-    body: ["ASME InterPACK 2026(미국 샌디에이고, 10월 26–29일)에 참석하여 박진현 학생과 이하은 교수가 연구 발표를 진행하였습니다."],
-    images: [],
-    cover: "ASME InterPACK 2026",
-    coverSub: "San Diego, CA · Oct 26–29, 2026",
+    date: "2026.10.26–29",
+    body: ["ASME InterPACK 2026(미국 샌디에이고)에 참석하여 박진현 학생과 이하은 교수가 연구 발표를 진행하였습니다."],
+    images: ["assets/img/news/2026-interpack-1.jpg", "assets/img/news/2026-interpack-2.jpg"],
     link: "https://event.asme.org/InterPACK",
     linkLabel: "학회 홈페이지"
+  },
+  {
+    id: "2026-electronics-cooling-workshop",
+    tag: "Conference",
+    title: "Presentations at the 4th Electronics Cooling & Thermal Management Workshop",
+    who: "정민영 · 박진현 학생, 이하은 교수",
+    date: "2026.10.23",
+    body: [
+      "제4회 전자장비냉각 및 열관리 통합 Workshop(더그랜드롯데 서울)에 정민영·박진현 학생과 이하은 교수가 참석하여 연구 발표를 진행하였습니다.",
+      "박진현 학생은 PINO(Physics-Informed Neural Operator) 연구로 구두 발표와 포스터 발표를 하였습니다."
+    ],
+    images: ["assets/img/news/2026-ecw-1.jpg", "assets/img/news/2026-ecw-2.jpg", "assets/img/news/2026-ecw-3.jpg", "assets/img/news/2026-ecw-4.jpg"]
   },
   {
     id: "2026-summer-retreat",
