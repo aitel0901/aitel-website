@@ -42,7 +42,7 @@ window.AITEL.news = [
       "제4회 전자장비냉각 및 열관리 통합 Workshop(더그랜드롯데 서울)에 정민영·박진현 학생과 이하은 교수가 참석하여 연구 발표를 진행하였습니다.",
       "박진현 학생은 PINO(Physics-Informed Neural Operator) 연구로 구두 발표와 포스터 발표를 하였습니다."
     ],
-    images: ["assets/img/news/2026-ecw-1.jpg", "assets/img/news/2026-ecw-2.jpg", "assets/img/news/2026-ecw-3.jpg", "assets/img/news/2026-ecw-4.jpg"]
+    images: ["assets/img/news/2026-ecw-2.jpg", "assets/img/news/2026-ecw-3.jpg", "assets/img/news/2026-ecw-4.jpg"]
   },
   {
     id: "2026-summer-retreat",
