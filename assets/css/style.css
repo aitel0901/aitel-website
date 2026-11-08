@@ -89,6 +89,12 @@ figure { margin: 0; }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); }
 .brand:hover { color: var(--ink); }
 .brand img { height: 34px; width: auto; }
+/* 연구실 로고 = Home 상단과 같은 그라데이션 AITEL 글자 (밝은 배경용은 남색에서 시작) */
+.wordmark {
+  display: inline-block; font-size: 27px; font-weight: 800; line-height: 1; letter-spacing: -0.045em; padding-right: .04em;
+  background: linear-gradient(92deg, #0d1b2a 0%, #13629f 36%, #e9a03c 72%, #e0552b 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-text strong { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
 .brand-text span { font-size: 11.5px; color: var(--muted); letter-spacing: .02em; }
@@ -691,6 +697,7 @@ figure { margin: 0; }
 .site-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--thermal); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
 .footer-brand img { height: 40px; width: auto; filter: brightness(1.25); }
+.footer-brand .wordmark { font-size: 36px; background-image: linear-gradient(92deg, #ffffff 0%, #cfe7f6 45%, #f5c27a 78%, #ef7a4b 100%); }
 .footer-brand p { margin-top: 14px; font-size: 14.5px; max-width: 340px; }
 .site-footer h4 { color: #fff; font-size: 13px; font-family: var(--mono); letter-spacing: .12em; text-transform: uppercase; font-weight: 600; margin-bottom: 14px; }
 .site-footer ul { list-style: none; display: grid; gap: 8px; font-size: 14.5px; }
