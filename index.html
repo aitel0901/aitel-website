@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AITEL · AI Thermal &amp; Energy Lab. | 영남대학교 AI 기반 열·에너지 연구실</title>
+  <meta name="description" content="AITEL은 열전달의 물리적 이해에 AI와 시뮬레이션을 결합해 반도체·모빌리티·에너지 시스템의 냉각과 열설계를 연구합니다. We combine heat-transfer physics, AI and simulation to design better thermal and energy systems.">
+  <meta name="theme-color" content="#0a1624">
+  <link rel="canonical" href="https://aitel.yu.ac.kr/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AITEL · AI Thermal & Energy Lab.">
+  <meta property="og:title" content="AITEL · AI Thermal & Energy Lab.">
+  <meta property="og:description" content="AI로 설계하고, 물리로 이해합니다. 영남대학교 AI 기반 열·에너지 연구실">
+  <meta property="og:url" content="https://aitel.yu.ac.kr/">
+  <meta property="og:image" content="https://aitel.yu.ac.kr/assets/img/og-image.png">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-root="">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="./" aria-label="AITEL 홈">
+        <img src="assets/img/logo.png" alt="AITEL" width="80" height="34">
+        <span class="brand-text"><strong>AI Thermal &amp; Energy Lab.</strong><span>Yeungnam University</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="주 메뉴">
+        <a href="./" aria-current="page">Home</a>
+        <a href="pi/">PI</a>
+        <a href="members/">Members</a>
+        <a href="research/">Research</a>
+        <a href="publication/">Publication</a>
+        <a href="news/">News</a>
+        <a href="contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas data-thermal="hero" aria-hidden="true"></canvas>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <span class="eyebrow">Yeungnam University · Automotive Engineering</span>
+        <h1 class="hero-title" id="hero-title"><span class="grad">AITEL</span></h1>
+        <p class="hero-sub">AI Thermal &amp; Energy Lab</p>
+        <p class="hero-sub-kr">AI 기반 열·에너지 연구실</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="research/">연구 분야 보기
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="contact/">Join AITEL</a>
+        </div>
+      </div>
+      <div class="hero-legend" aria-hidden="true"><span>COOL</span><i></i><span>HOT</span></div>
+    </section>
+
+    <!-- ============ INTRO + LATEST NEWS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="intro reveal">
+          <div>
+            <span class="eyebrow">About AITEL</span>
+            <h2>AI로 설계하고,<br>물리로 이해합니다.</h2>
+          </div>
+          <div class="intro-body">
+            <p>AITEL은 열전달의 물리적 이해에 AI와 시뮬레이션을 결합해 반도체·모빌리티·에너지 시스템의 냉각과 열설계를 연구합니다.</p>
+            <p class="en">We combine heat-transfer physics, AI and simulation to design better thermal and energy systems.</p>
+          </div>
+        </div>
+        <div id="latest-news"></div>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH AREAS ============ -->
+    <section class="section section-soft" aria-labelledby="areas-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Research Areas</span>
+            <h2 id="areas-title">연구 분야</h2>
+          </div>
+          <a class="link-arrow" href="research/">연구 자세히 보기 · Research
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+
+        <div class="areas">
+          <article class="area reveal">
+            <span class="area-num">01</span>
+            <div class="area-icon contain">
+              <img src="assets/img/areas/01-inverse-design.jpg" alt="다중 제트 노즐 설계, 유전 알고리즘 최적화 결과와 CFD 검증 온도장" width="900" height="326" loading="lazy">
+            </div>
+            <h3>AI 기반 열설계·역설계</h3>
+            <p>물리 기반 AI와 최적화로 열 성능을 예측하고, 목표 성능·제약조건에 맞는 냉각 구조와 운전조건을 탐색합니다.</p>
+            <span class="en">AI-driven thermal inverse design</span>
+          </article>
+
+          <article class="area reveal">
+            <span class="area-num">02</span>
+            <div class="area-icon contain">
+              <img src="assets/img/areas/02-emotor-active-parts.jpg" alt="전기차 구동모터의 헤어핀 권선 고정자와 회전자" width="586" height="560" loading="lazy">
+              <span class="area-credit">Picture: Bosch</span>
+            </div>
+            <h3>AI 다물리 시뮬레이션</h3>
+            <p>AI 대체모델과 다물리 연성 해석으로 열–전기·열–구조 상호작용과 제조 공정의 거동을 예측합니다.</p>
+            <span class="en">AI-augmented multiphysics simulation</span>
+          </article>
+
+          <article class="area reveal">
+            <span class="area-num">03</span>
+            <div class="area-icon">
+              <img src="assets/img/areas/03-flow-boiling.jpg" alt="유전 유체를 이용한 유동비등 고속 가시화 이미지" width="900" height="372" loading="lazy">
+            </div>
+            <h3>다상 열전달·고성능 냉각</h3>
+            <p>비등·응축·극저온 열유동을 실험·해석·AI로 분석하고, 고성능 냉각 기술을 연구합니다.</p>
+            <span class="en">Multiphase heat transfer &amp; advanced cooling</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH FRAMEWORK ============
+         그림은 assets/img/framework/ 의 연구 발표자료 이미지입니다.
+         한 단계에 그림이 여러 장이면 fw-shot / fw-cap / fw-thumbs 버튼을 같은 순서로 추가하세요. -->
+    <section class="section framework" aria-labelledby="fw-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Research Framework</span>
+            <h2 id="fw-title">From applications to optimized thermal solutions</h2>
+            <p>응용 분야에서 출발해 열유동 현상을 이해하고, AI 중심 설계 프레임워크와 검증을 거쳐 최적의 열관리 솔루션으로 연결합니다.</p>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="fw-steps" role="tablist" aria-label="연구 프레임워크 단계">
+            <button class="fw-step" role="tab" id="fw-tab-1" aria-controls="fw-1" aria-selected="true"><span class="n">01</span><span class="t">Applications</span></button>
+            <button class="fw-step" role="tab" id="fw-tab-2" aria-controls="fw-2" aria-selected="false"><span class="n">02</span><span class="t">Phenomena<br>Physics &amp; Multiphase</span></button>
+            <button class="fw-step" role="tab" id="fw-tab-3" aria-controls="fw-3" aria-selected="false"><span class="n">03</span><span class="t">AI-Centered<br>Design Framework</span></button>
+            <button class="fw-step" role="tab" id="fw-tab-4" aria-controls="fw-4" aria-selected="false"><span class="n">04</span><span class="t">Validation</span></button>
+            <button class="fw-step" role="tab" id="fw-tab-5" aria-controls="fw-5" aria-selected="false"><span class="n">05</span><span class="t">Optimized<br>Thermal Solutions</span></button>
+          </div>
+
+          <!-- 01 Applications -->
+          <div class="fw-panel" role="tabpanel" id="fw-1" aria-labelledby="fw-tab-1">
+            <figure class="fw-figure" data-gallery>
+              <div class="fw-shots">
+                <a class="fw-shot is-active" href="assets/img/framework/01-mobility-e-drive.jpg" data-zoom><img src="assets/img/framework/01-mobility-e-drive.jpg" alt="모터·인버터·감속기가 통합된 전기차 구동 시스템(eAxle)과 800 V 인버터 (Picture: Bosch)" width="1516" height="660" loading="lazy"></a>
+                <a class="fw-shot fit" href="assets/img/framework/01-power-electronics-cold-plate.jpg" data-zoom><img src="assets/img/framework/01-power-electronics-cold-plate.jpg" alt="전력전자 냉각판의 유로·핀핀 형상 변경 전후 모델과 냉각판 표면 온도, 내부 유속·압력 분포 CFD 결과" width="1278" height="740" loading="lazy"></a>
+                <a class="fw-shot" href="assets/img/framework/01-pool-boiling.jpg" data-zoom><img src="assets/img/framework/01-pool-boiling.jpg" alt="가열면 위 풀비등 고속 촬영 사진: 비등 개시, 핵비등, 임계열유속 근접 단계" width="1770" height="760" loading="lazy"></a>
+              </div>
+              <figcaption>
+                <span class="fw-cap is-active"><b>Electric drive units</b> — 모터·인버터·감속기의 통합과 고출력화로 발열 밀도가 높아지면서, 권선·전력반도체 냉각이 성능과 수명을 좌우 <i>Images: Bosch Media Service (Picture: Bosch)</i></span>
+                <span class="fw-cap"><b>Power-electronics cold plate</b> — 유로·핀핀 형상 변경 전·후의 냉각판 표면 온도와 내부 유속·압력 분포 비교 (CFD)</span>
+                <span class="fw-cap"><b>Pool boiling for two-phase immersion cooling</b> — 비등 개시 → 핵비등 → 임계열유속(CHF) 근접 단계의 기포 거동 <i>Lee, H. et al. (2026, under review)</i></span>
+              </figcaption>
+              <div class="fw-thumbs" role="group" aria-label="그림 선택">
+                <button type="button" aria-pressed="true">Mobility · E-drive</button>
+                <button type="button" aria-pressed="false">Power electronics</button>
+                <button type="button" aria-pressed="false">Semiconductor · Data center</button>
+              </div>
+            </figure>
+            <div class="fw-body">
+              <div class="fw-intro">
+                <span class="k">Stage 01</span>
+                <h3>Applications</h3>
+                <p class="lead">반도체, 모빌리티, 데이터센터, 설비 등 열관리가 성능을 좌우하는 응용 분야에서 연구 문제를 정의합니다.</p>
+              </div>
+              <div class="fw-groups">
+                <div class="fw-group">
+                  <h4>Domains</h4>
+                  <ul class="fw-items">
+                    <li>Mobility cooling</li>
+                    <li>AI semiconductor cooling</li>
+                    <li>Data center cooling</li>
+                    <li>Facility / HVAC efficiency optimization</li>
+                  </ul>
+                </div>
+                <div class="fw-group">
+                  <h4>Goals</h4>
+                  <ul class="fw-goals">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>High performance</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Lower energy</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Reduced emissions</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Reliability &amp; durability</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="fw-nav"><button type="button" disabled>이전</button><span class="count">01 / 05</span><button type="button" data-fw-go="1">다음 · Phenomena <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+            </div>
+          </div>
+
+          <!-- 02 Phenomena -->
+          <div class="fw-panel" role="tabpanel" id="fw-2" aria-labelledby="fw-tab-2">
+            <figure class="fw-figure" data-gallery>
+              <div class="fw-shots">
+                <a class="fw-shot is-active" href="assets/img/framework/02-thermal-design-approaches.jpg" data-zoom><img src="assets/img/framework/02-thermal-design-approaches.jpg" alt="풀비등 실험장치와 계측 시스템, 상변화 CFD 해석, 응축 열전달 이론 모델" width="1800" height="805" loading="lazy"></a>
+              </div>
+              <figcaption>
+                <span class="fw-cap is-active"><b>Thermal design approaches</b> — 실험(정량 측정·검증) · CFD(유동·온도장 상세 해석) · 수학적 모델(물리 기반 빠른 예측)</span>
+              </figcaption>
+            </figure>
+            <div class="fw-body">
+              <div class="fw-intro">
+                <span class="k">Stage 02</span>
+                <h3>Phenomena · Physics &amp; Multiphase</h3>
+                <p class="lead">상변화와 단상 대류를 포함한 열유동 현상을 실험·해석 도구로 정량화합니다.</p>
+              </div>
+              <div class="fw-groups">
+                <div class="fw-group">
+                  <h4>Multiphase</h4>
+                  <ul class="fw-items cols-3">
+                    <li>Flow boiling</li><li>Pool boiling</li><li>Film condensation</li>
+                    <li>Dropwise condensation</li><li>Vapor chamber</li><li>Two-phase thermal system</li>
+                  </ul>
+                </div>
+                <div class="fw-group">
+                  <h4>Single-phase convection <span class="sub">(various cooling strategies)</span></h4>
+                  <ul class="fw-items">
+                    <li>Channel flow</li><li>Jet impingement</li><li>Pin fin array</li><li>Cross flow</li>
+                  </ul>
+                </div>
+                <div class="fw-group">
+                  <h4>Analysis tools</h4>
+                  <ul class="fw-items cols-3">
+                    <li>High-speed imaging</li><li>CFD analysis</li><li>Heat-transfer analysis</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="fw-nav"><button type="button" data-fw-go="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> 이전</button><span class="count">02 / 05</span><button type="button" data-fw-go="2">다음 · AI Framework <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+            </div>
+          </div>
+
+          <!-- 03 AI-Centered Design Framework -->
+          <div class="fw-panel" role="tabpanel" id="fw-3" aria-labelledby="fw-tab-3">
+            <figure class="fw-figure">
+              <div class="dg">
+                <div class="dg-block">
+                  <p class="dg-title">Design loop</p>
+                  <ol class="dg-loop">
+                    <li style="--c:#13629f"><span class="no">01</span><b>Design inputs</b><span>Geometry · Material · Conditions</span></li>
+                    <li style="--c:#2f8fcf"><span class="no">02</span><b>High-fidelity data</b><span>Experiment · Simulation</span></li>
+                    <li style="--c:#5fb3cf"><span class="no">03</span><b>AI prediction</b><span>Surrogate models</span></li>
+                    <li style="--c:#e9a03c"><span class="no">04</span><b>Design exploration</b><span>Inverse · Multi-objective</span></li>
+                    <li style="--c:#e0552b"><span class="no">05</span><b>Physics-based validation</b><span>CFD · Experiment</span></li>
+                  </ol>
+                  <div class="dg-return" aria-hidden="true"><span>Feedback · new data</span></div>
+                </div>
+                <div class="dg-block">
+                  <p class="dg-title">Physics × ML</p>
+                  <div class="dg-axis" aria-hidden="true"><span>Data-driven</span><span>Physics-based</span></div>
+                  <ul class="dg-levels">
+                    <li><b>Physics-aware data</b><span>물리 특성을 반영한 데이터와 표현</span></li>
+                    <li><b>Physics-guided learning</b><span>물리 모델을 기준으로 한 보정 학습</span></li>
+                    <li><b>Physics-informed learning</b><span>지배방정식·경계조건을 학습에 반영</span></li>
+                    <li><b>Physics-constrained design</b><span>물리·제약조건을 만족하는 설계 탐색</span></li>
+                  </ul>
+                </div>
+              </div>
+              <figcaption>
+                <span class="fw-cap is-active"><b>AI-centered thermal design</b> — 데이터·물리·AI를 하나의 설계 루프로 연결하고, 문제에 맞는 수준으로 물리 지식을 결합합니다.</span>
+              </figcaption>
+            </figure>
+            <div class="fw-body">
+              <div class="fw-intro">
+                <span class="k">Stage 03</span>
+                <h3>AI-Centered Design Framework</h3>
+                <p class="lead">다중 모달 데이터와 물리 지식을 결합한 AI 모델로 성능을 예측하고, 목표 성능을 만족하는 설계를 역으로 탐색합니다.</p>
+              </div>
+              <div class="fw-groups">
+                <div class="fw-group">
+                  <h4>Data &amp; learning</h4>
+                  <ul class="fw-items">
+                    <li>Multimodal data<small>Geometry · Surface structure · Material · Physics · Experiment · Condition</small></li>
+                    <li>POD<small>Mode 1 … Mode n</small></li>
+                    <li>Physics-informed learning<small>Governing equations · Boundary conditions · Conservation laws</small></li>
+                    <li>Surrogate model</li>
+                  </ul>
+                </div>
+                <div class="fw-group">
+                  <h4>Design &amp; optimization</h4>
+                  <ul class="fw-items">
+                    <li>Inverse design<small>Target performance → Optimized design</small></li>
+                    <li>GAN / Generative design<small>Latent space z</small></li>
+                    <li>Topology optimization<small>Design domain → Optimized topology</small></li>
+                    <li>Pareto optimization<small>Pareto front</small></li>
+                    <li>Prediction performance</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="fw-nav"><button type="button" data-fw-go="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> 이전</button><span class="count">03 / 05</span><button type="button" data-fw-go="3">다음 · Validation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+            </div>
+          </div>
+
+          <!-- 04 Validation -->
+          <div class="fw-panel" role="tabpanel" id="fw-4" aria-labelledby="fw-tab-4">
+            <figure class="fw-figure" data-gallery>
+              <div class="fw-shots">
+                <a class="fw-shot is-active" href="assets/img/framework/04-flow-boiling-prediction.jpg" data-zoom><img src="assets/img/framework/04-flow-boiling-prediction.jpg" alt="유전 유체 유동비등 가시화와 예측 대비 실제 3차원 온도 분포 비교" width="1800" height="358" loading="lazy"></a>
+                <a class="fw-shot" href="assets/img/framework/04-pinn-cfd-validation.jpg" data-zoom><img src="assets/img/framework/04-pinn-cfd-validation.jpg" alt="다층 패키지 열확산 문제의 물리 정보 신경망과 CFD 검증" width="1800" height="557" loading="lazy"></a>
+              </div>
+              <figcaption>
+                <span class="fw-cap is-active"><b>Multimodal ML for flow boiling</b> — 유동비등 가시화 이미지와 운전조건으로 온도 분포 예측, True 대비 MAPE 0.94–1.20 % <i>Lee, H. et al., Case Stud. Therm. Eng. 57, 104331 (2024)</i></span>
+                <span class="fw-cap"><b>PINN for heat spreading in multi-layer packages</b> — 지배방정식·경계조건·계면 연속·에너지 보존을 학습에 반영하고 CFD로 검증 <i>[1] Kim et al. (2026, under review) · [2] Feng, T. Q. &amp; Xu, J. L., Appl. Therm. Eng. 24 (2004)</i></span>
+              </figcaption>
+              <div class="fw-thumbs" role="group" aria-label="그림 선택">
+                <button type="button" aria-pressed="true">Flow boiling · Prediction vs True</button>
+                <button type="button" aria-pressed="false">PINN · CFD validation</button>
+              </div>
+            </figure>
+            <div class="fw-body">
+              <div class="fw-intro">
+                <span class="k">Stage 04</span>
+                <h3>Validation</h3>
+                <p class="lead">실험 데이터, 열화상, 계측, 시뮬레이션과 시제품 평가로 모델과 설계를 다각도로 검증합니다.</p>
+              </div>
+              <div class="fw-groups">
+                <div class="fw-group">
+                  <h4>Methods</h4>
+                  <ul class="fw-items">
+                    <li>Experimental data / literature benchmark</li>
+                    <li>IR / thermal imaging<small>Visible surface temperature and heat spreading</small></li>
+                    <li>Pressure &amp; temperature measurement<small>High-frequency measurements under controlled conditions</small></li>
+                    <li>Simulation vs. experiment</li>
+                    <li>Field comparison<small>Verify in real-life / field relevant conditions</small></li>
+                    <li>Prototype evaluation<small>Prototype testing for real-world verification</small></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="fw-nav"><button type="button" data-fw-go="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> 이전</button><span class="count">04 / 05</span><button type="button" data-fw-go="4">다음 · Solutions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+            </div>
+          </div>
+
+          <!-- 05 Optimized Thermal Solutions -->
+          <div class="fw-panel" role="tabpanel" id="fw-5" aria-labelledby="fw-tab-5">
+            <figure class="fw-figure">
+              <div class="dg">
+                <div class="dg-block">
+                  <p class="dg-title">Cooling approaches</p>
+                  <ul class="dg-tiles">
+                    <li style="--c:#13629f"><b>Liquid cold plates &amp; heat sinks</b><span>유로·핀 형상 설계</span><em>Power electronics · Servers</em></li>
+                    <li style="--c:#2f8fcf"><b>Jet &amp; spray impingement</b><span>고열유속 국부 냉각</span><em>Power modules · Chips</em></li>
+                    <li style="--c:#5fb3cf"><b>Two-phase cooling</b><span>비등·응축 잠열 활용</span><em>Chips · Heat pumps</em></li>
+                    <li style="--c:#7cb98f"><b>Immersion &amp; direct-to-chip</b><span>발열원 직접 냉각</span><em>Data centers · AI servers</em></li>
+                    <li style="--c:#e9a03c"><b>Vapor chambers &amp; heat spreaders</b><span>열확산·온도 균일화</span><em>E-motors · Packages</em></li>
+                    <li style="--c:#e0552b"><b>Cooling units &amp; HVAC systems</b><span>시스템·설비 에너지 효율</span><em>Data centers · Facilities</em></li>
+                  </ul>
+                </div>
+                <div class="dg-band"><b>AI-driven multi-objective optimization</b><span>Peak temperature</span><span>Temperature uniformity</span><span>Pressure drop · Pumping power</span><span>Reliability</span><span>Manufacturability</span></div>
+              </div>
+              <figcaption>
+                <span class="fw-cap is-active"><b>Thermal solution space</b> — 특정 냉각 방식에 한정하지 않고, 응용 분야의 요구에 맞는 냉각 방식을 선택해 AI 기반 다목적 최적화로 설계합니다.</span>
+              </figcaption>
+            </figure>
+            <div class="fw-body">
+              <div class="fw-intro">
+                <span class="k">Stage 05</span>
+                <h3>Optimized Thermal Solutions</h3>
+                <p class="lead">부품에서 모듈, 시스템·설비 단계까지 확장 가능한 최적 열관리 솔루션을 제시합니다.</p>
+              </div>
+              <div class="fw-groups">
+                <div class="fw-group">
+                  <h4>Scale</h4>
+                  <ul class="fw-items">
+                    <li>Component level<small>Cold plate</small></li>
+                    <li>Component level<small>Vapor chamber</small></li>
+                    <li>Module level<small>Two-phase microchannel module</small></li>
+                    <li>Module level<small>Direct-to-chip / immersion cooling</small></li>
+                    <li>System level<small>Liquid cooling unit</small></li>
+                    <li>System / Facility level<small>Facility / HVAC optimization</small></li>
+                  </ul>
+                </div>
+                <div class="fw-group">
+                  <h4>Outcomes</h4>
+                  <ul class="fw-goals">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>High performance</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Lower energy</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Reduced emissions</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Reliability &amp; durability</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="fw-nav"><button type="button" data-fw-go="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> 이전</button><span class="count">05 / 05</span><button type="button" data-fw-go="0">처음으로 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUICK LINKS + JOIN ============ -->
+    <section class="section">
+      <div class="container">
+        <nav class="quick reveal" aria-label="바로가기">
+          <a href="research/"><span><span class="kr">연구 자세히 보기</span><span class="en">Research</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="publication/"><span><span class="kr">논문 보기</span><span class="en">Publications</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="members/"><span><span class="kr">구성원 보기</span><span class="en">Members</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </nav>
+
+        <!-- 영어가 기본, '한국어' 탭을 누르면 한국어로 바뀝니다 (data-lang-tabs) -->
+        <div class="join reveal" style="margin-top:56px" data-lang-tabs>
+          <span class="glow" aria-hidden="true"></span>
+          <div class="join-top">
+            <span class="eyebrow" style="color:#4aa3d8">Join AITEL</span>
+            <div class="lang-tabs" role="tablist" aria-label="Language">
+              <button type="button" role="tab" data-lang-btn="en" aria-selected="true">EN</button>
+              <button type="button" role="tab" data-lang-btn="ko" aria-selected="false">한국어</button>
+            </div>
+          </div>
+          <div class="join-pane" data-lang-pane="en" role="tabpanel" lang="en">
+            <div>
+              <h2>Join us in AI-driven<br>thermal &amp; energy research.</h2>
+              <p>We are looking for passionate undergraduate and graduate (M.S./Ph.D.) students. For applications or research collaboration, please email us with your research interests and background.</p>
+            </div>
+            <div class="join-side">
+              <span class="join-mail">Applications &amp; collaboration · <a href="mailto:haeunlee@yu.ac.kr">haeunlee@yu.ac.kr</a></span>
+              <a class="btn btn-light" href="contact/">Contact us
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+          <div class="join-pane" data-lang-pane="ko" role="tabpanel" lang="ko" hidden>
+            <div>
+              <h2>AI와 열·에너지 연구를<br>함께할 연구원을 모집합니다.</h2>
+              <p>AI와 열·에너지 연구를 함께할 학부 연구생과 대학원생을 모집합니다. 지원 및 공동연구 문의는 관심 연구 분야와 관련 이력을 함께 보내주시기 바랍니다.</p>
+            </div>
+            <div class="join-side">
+              <span class="join-mail">지원·공동연구 문의 · <a href="mailto:haeunlee@yu.ac.kr">haeunlee@yu.ac.kr</a></span>
+              <a class="btn btn-light" href="contact/">지원·문의하기
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/logo.png" alt="AITEL" width="94" height="40">
+          <p>AI Thermal &amp; Energy Lab.<br>AI 기반 열·에너지 연구실<br>Department of Automotive Engineering, Yeungnam University</p>
+        </div>
+        <div>
+          <h4>Menu</h4>
+          <ul><li><a href="./">Home</a></li><li><a href="pi/">PI</a></li><li><a href="members/">Members</a></li><li><a href="research/">Research</a></li><li><a href="publication/">Publication</a></li><li><a href="news/">News</a></li><li><a href="contact/">Contact</a></li></ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:haeunlee@yu.ac.kr">haeunlee@yu.ac.kr</a></li>
+            <li><a href="tel:+82538103010">+82-53-810-3010</a></li>
+            <li>280 Daehak-ro, Gyeongsan-si,<br>Gyeongsangbuk-do</li>
+            <li>영남대학교 자동차관 G16 203호 (Lab)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> AITEL · AI Thermal &amp; Energy Lab., Yeungnam University</span><span>aitel.yu.ac.kr</span></div>
+    </div>
+  </footer>
+
+  <script src="data/news.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
