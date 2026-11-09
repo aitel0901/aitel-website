@@ -65,22 +65,18 @@ assets/img/             사진·로고
 ## 배포 (GitHub Pages)
 
 - 저장소: https://github.com/aitel0901/aitel-website (Public, `main` 브랜치 최상위가 곧 사이트)
-- 지금 주소(미리보기): https://aitel0901.github.io/aitel-website/
-- 최종 주소: https://aitel.yu.ac.kr (학교 DNS 변경 후 연결)
+- 사이트 주소: **https://aitel.yu.ac.kr** (2026.11.09 연결 완료, HTTPS 적용)
+- `aitel0901.github.io/aitel-website/` 로 들어와도 위 주소로 자동 이동합니다.
 - 저장소의 파일을 고쳐 저장(Commit)하면 1~2분 뒤 자동으로 다시 배포됩니다.
 
-### 학교 DNS가 바뀐 뒤 aitel.yu.ac.kr 연결 (꼭 해야 함)
-미리보기를 위해 Custom domain 은 비워 둔 상태입니다. 학교에서 DNS를 바꿨다고 연락이 오면:
-1. 저장소 **Settings → Pages → Custom domain** 에 `aitel.yu.ac.kr` 입력 → Save (저장소에 `CNAME` 파일이 자동으로 생깁니다).
-2. 잠시 후 HTTPS 인증서가 발급되면 **Enforce HTTPS** 를 체크합니다.
+### 주의: `CNAME` 파일을 지우지 마세요
+저장소 최상위의 `CNAME` 파일(내용: `aitel.yu.ac.kr`)과 **Settings → Pages → Custom domain** 설정이 도메인 연결을 유지합니다.
+이 설정을 비우면 aitel.yu.ac.kr 에 GitHub 404 페이지("There isn't a GitHub Pages site here")가 뜹니다.
+그럴 땐 Custom domain 에 `aitel.yu.ac.kr` 을 다시 넣고 Save → **Enforce HTTPS** 체크.
 
-이 연결을 하기 전까지는 DNS가 바뀌어도 aitel.yu.ac.kr 에 GitHub 오류 페이지가 보이니, DNS 변경 직후 바로 연결합니다.
+## 도메인 연결 (영남대 DNS 설정, 2026.11.09 AI인프라팀 반영)
 
-## 도메인 연결 (영남대 정보통신 담당 부서에 요청)
-
-현재 `aitel.yu.ac.kr` 은 Google Sites(`ghs.googlehosted.com`)를 가리키고 있습니다. 아래처럼 변경을 요청합니다.
-
-| 호스트 | 유형 | 현재 값 | 변경할 값 |
+| 호스트 | 유형 | 이전 값 | 현재 값 |
 |---|---|---|---|
 | aitel.yu.ac.kr | CNAME | ghs.googlehosted.com | **aitel0901.github.io** |
 
@@ -90,5 +86,4 @@ assets/img/             사진·로고
 |---|---|---|
 | _github-pages-challenge-aitel0901.aitel.yu.ac.kr | TXT | (GitHub이 발급한 값) |
 
-DNS 변경 후 반영까지 보통 수 분~수 시간 걸립니다. 반영 전까지는 기존 Google Sites가 계속 보입니다.
-전환이 끝나면 Google Sites의 *설정 → 맞춤 도메인* 에서 aitel.yu.ac.kr 연결을 해제해도 됩니다(선택).
+전환이 끝났으므로 Google Sites의 *설정 → 맞춤 도메인* 에서 aitel.yu.ac.kr 연결을 해제해도 됩니다(선택).
