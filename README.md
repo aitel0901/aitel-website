@@ -50,7 +50,7 @@ assets/img/             사진·로고
 `data/publications.js` — `international`(국제 저널) 또는 `domestic`(국내 저널·학회) 목록 맨 위에 추가합니다. 번호는 자동으로 매겨집니다.
 
 ### 연구과제 추가
-`data/projects.js` — 한 줄에 과제 하나씩 추가합니다(연구비 단위: 만원).
+`data/projects.js` — 과제 하나당 `{ title, agency }` 한 줄. 여러 세부과제를 묶을 때는 `items: [...]` 를 붙입니다(RISE 사업 참고). 연구비·기간은 표시하지 않습니다.
 
 ## Home 연구 그림
 - **연구 분야 카드(01–03)** 사진: `assets/img/areas/`
